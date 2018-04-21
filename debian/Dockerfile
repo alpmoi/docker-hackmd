@@ -1,7 +1,7 @@
 FROM node:8.11.1
 
 # Build arguments to change source url, branch or tag
-ARG HACKMD_REPOSITORY=https://github.com/hackmdio/hackmd.git
+ARG HACKMD_REPOSITORY=https://github.com/alpmoi/hackmd.git
 ARG VERSION=master
 
 # Set some default config variables
@@ -21,9 +21,11 @@ RUN apt-get update && \
 
     # Clone the source
     git clone --depth 1 --branch $VERSION $HACKMD_REPOSITORY /hackmd && \
+    #cp -r ../../hackmd/* /hackmd || cp -r ../hackmd/* /hackmd && \
     # Print the cloned version and clean up git files
     cd /hackmd && \
     git log --pretty=format:'%ad %h %d' --abbrev-commit --date=short -1 && echo && \
+    git pull && \
     rm -rf /hackmd/.git && \
 
     # Symlink configuration files
