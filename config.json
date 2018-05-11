@@ -18,7 +18,7 @@
             "searchFilter": "",
             "searchAttributes": ["displayName, mail"],
             "usernameField": "sAMAccountName",
-            "useridField": "uid",
+            "useridField": "uid"
         }
     }
 }
