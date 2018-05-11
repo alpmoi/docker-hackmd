@@ -9,16 +9,6 @@
             "host": "hackmdPostgres",
             "port": "5432",
             "dialect": "postgres"
-        },
-        "ldap": {
-            "url": "ldap://ldap1.primault.eu",
-            "bindDn": "cn=Administrateur,cn=Users,dc=primault,dc=eu",
-            "bindCredentials": null,
-            "searchBase": "ou=ExtUser,dc=primault,dc=eu",
-            "searchFilter": "",
-            "searchAttributes": ["displayName, mail"],
-            "usernameField": "sAMAccountName",
-            "useridField": "uid"
         }
     }
 }
